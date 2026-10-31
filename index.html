@@ -1,105 +1,288 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Studio | Servicios digitales</title>
-    <meta name="description" content="Soluciones digitales para pequeños negocios.">
+
+    <title>Digital Studio | Soluções digitais</title>
+    <meta name="description" content="Soluções digitais para pequenos negócios.">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
+    <header class="header">
         <nav class="navbar">
-            <a href="#" class="logo">Digital Studio.</a>
+            <a href="#" class="logo">Digital<span>Studio.</span></a>
 
-            <a href="#servicios" class="nav-link">Servicios</a>
+            <div class="nav-links">
+                <a href="#inicio" data-i18n="navHome">Início</a>
+                <a href="#servicos" data-i18n="navServices">Serviços</a>
+                <a href="#sobre" data-i18n="navAbout">Sobre</a>
+                <a href="#contato" data-i18n="navContact">Contato</a>
+            </div>
+
+            <select id="language" aria-label="Selecionar idioma">
+                <option value="pt">PT</option>
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <p class="etiqueta">SOLUCIONES DIGITALES</p>
 
-            <h1>Tu negocio merece crecer en internet.</h1>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="etiqueta" data-i18n="tagline">
+                    SOLUÇÕES DIGITAIS
+                </p>
 
-            <p class="descripcion">
-                Creamos soluciones digitales para ayudar a pequeños
-                negocios a mejorar su presencia online.
-            </p>
+                <h1 data-i18n="heroTitle">
+                    Seu negócio merece crescer no digital.
+                </h1>
 
-           <a href="#servicios" class="boton">
-    Conoce nuestros servicios
-</a>
+                <p class="descricao" data-i18n="heroDescription">
+                    Criamos soluções digitais para ajudar pequenos negócios
+                    a construir uma presença profissional na internet.
+                </p>
 
-<a
-    href="https://wa.me/5511980568714?text=Hola,%20quiero%20información%20sobre%20sus%20servicios"
-    class="boton boton-whatsapp"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Contactar por WhatsApp
-</a>
+                <div class="hero-buttons">
+                    <a href="#servicos" class="button button-primary"
+                       data-i18n="heroButton">
+                        Conheça nossos serviços
+                    </a>
+
+                    <a href="#contato" class="button button-secondary"
+                       data-i18n="contactButton">
+                        Fale conosco
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="decoration-card">
+                    <span class="decoration-icon">✦</span>
+                    <p data-i18n="decorationText">Ideias que se tornam soluções.</p>
+                </div>
+            </div>
         </section>
 
+        <section class="services section" id="servicos">
+            <div class="section-heading">
+                <p class="section-label" data-i18n="servicesLabel">
+                    O QUE FAZEMOS
+                </p>
+
+                <h2 data-i18n="servicesTitle">Nossas soluções digitais</h2>
+
+                <p data-i18n="servicesDescription">
+                    Ferramentas práticas para melhorar a presença e a organização
+                    do seu negócio.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="card-icon">⌘</div>
+                    <h3 data-i18n="service1Title">Criação de páginas web</h3>
+                    <p data-i18n="service1Description">
+                        Páginas modernas e profissionais para apresentar sua empresa.
+                    </p>
+                    <a href="#contato" class="card-link" data-i18n="quote">
+                        Solicitar orçamento →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">▤</div>
+                    <h3 data-i18n="service2Title">Catálogos digitais</h3>
+                    <p data-i18n="service2Description">
+                        Apresente seus produtos de maneira organizada e elegante.
+                    </p>
+                    <a href="#contato" class="card-link" data-i18n="quote">
+                        Solicitar orçamento →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">▦</div>
+                    <h3 data-i18n="service3Title">Planilhas e ferramentas</h3>
+                    <p data-i18n="service3Description">
+                        Organize vendas, clientes e tarefas com ferramentas simples.
+                    </p>
+                    <a href="#contato" class="card-link" data-i18n="quote">
+                        Solicitar orçamento →
+                    </a>
+                </article>
+
+            </div>
+        </section>
         
-<section id="servicios" class="servicios">
-    <h2>Nossos serviços</h2>
-    <p class="subtitulo">
-        Soluções digitais para ajudar seu negócio a crescer.
-    </p>
+        <section class="portfolio section" id="portfolio">
 
-    <div class="tarjetas">
-        <article class="tarjeta">
-            <h3>Criação de páginas web</h3>
-            <p>Uma página profissional para apresentar sua empresa.</p>
-            <p class="preco">A partir de R$ 300</p>
-            <a href="https://wa.me/55TU_NUMERO"
-               class="link-servico">Solicitar orçamento</a>
-        </article>
+            <div class="section-heading">
+                <p class="section-label" data-i18n="portfolioLabel">
+            NOSSO PORTFÓLIO
+                </p>
 
-        <article class="tarjeta">
-            <h3>Catálogos digitais</h3>
-            <p>Apresente seus produtos de forma organizada e elegante.</p>
-            <p class="preco">A partir de R$ 100</p>
-            <a href="https://wa.me/55TU_NUMERO"
-               class="link-servico">Solicitar orçamento</a>
-        </article>
+            <h2 data-i18n="portfolioTitle">
+            Projetos que transformam ideias em soluções
+            </h2>
 
-        <article class="tarjeta">
-            <h3>Planilhas e ferramentas</h3>
-            <p>Organize vendas, clientes e tarefas do seu negócio.</p>
-            <p class="preco">A partir de R$ 80</p>
-            <a href="https://wa.me/55TU_NUMERO"
-               class="link-servico">Solicitar orçamento</a>
-        </article>
-    </div>
-</section>
+                <p data-i18n="portfolioDescription">
+                Conheça alguns exemplos de soluções que podemos desenvolver.
+                </p>
+            </div>
 
-            <h2>¿Cómo podemos ayudarte?</h2>
+            <div class="portfolio-grid">
 
-            <div class="tarjetas">
-                <article class="tarjeta">
-                    <h3>Páginas web</h3>
-                    <p>Páginas profesionales para presentar tu negocio.</p>
+               <article class="portfolio-card">
+            <div class="portfolio-image website-image">
+                <span>WEB DESIGN</span>
+            </div>
+
+            <div class="portfolio-info">
+                <span class="project-type" data-i18n="demo">
+                    PROJETO DEMONSTRATIVO
+                </span>
+
+                <h3 data-i18n="portfolio1Title">Página web empresarial</h3>
+
+                <p data-i18n="portfolio1Description">
+                    Uma apresentação profissional para pequenas empresas.
+                </p>
+            </div>
                 </article>
 
-                <article class="tarjeta">
-                    <h3>Catálogos digitales</h3>
-                    <p>Presenta tus productos de manera organizada.</p>
+                <article class="portfolio-card">
+            <div class="portfolio-image catalog-image">
+                <span>DIGITAL CATALOG</span>
+            </div>
+
+            <div class="portfolio-info">
+                <span class="project-type" data-i18n="demo">
+                    PROJETO DEMONSTRATIVO
+                </span>
+
+                <h3 data-i18n="portfolio2Title">Catálogo digital</h3>
+
+                <p data-i18n="portfolio2Description">
+                    Uma forma elegante de apresentar produtos e serviços.
+                </p>
+            </div>
                 </article>
 
-                <article class="tarjeta">
-                    <h3>Herramientas digitales</h3>
-                    <p>Soluciones sencillas para organizar tu negocio.</p>
+                <article class="portfolio-card">
+            <div class="portfolio-image dashboard-image">
+                <span>BUSINESS TOOLS</span>
+            </div>
+
+            <div class="portfolio-info">
+                <span class="project-type" data-i18n="demo">
+                    PROJETO DEMONSTRATIVO
+                </span>
+
+                <h3 data-i18n="portfolio3Title">Planilha de gestão</h3>
+
+                <p data-i18n="portfolio3Description">
+                    Organização de vendas, clientes e resultados.
+                </p>
+            </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="process section">
+            <div class="section-heading">
+                <p class="section-label" data-i18n="processLabel">
+                    NOSSO PROCESSO
+                </p>
+
+                <h2 data-i18n="processTitle">Como trabalhamos</h2>
+
+                <p data-i18n="processDescription">
+                    Um processo simples, transparente e pensado para você.
+                </p>
+            </div>
+
+            <div class="steps">
+                <article class="step">
+                    <span>01</span>
+                    <h3 data-i18n="step1Title">Conversamos</h3>
+                    <p data-i18n="step1Description">
+                        Entendemos suas necessidades e seus objetivos.
+                    </p>
+                </article>
+
+                <article class="step">
+                    <span>02</span>
+                    <h3 data-i18n="step2Title">Planejamos</h3>
+                    <p data-i18n="step2Description">
+                        Definimos a melhor solução para seu negócio.
+                    </p>
+                </article>
+
+                <article class="step">
+                    <span>03</span>
+                    <h3 data-i18n="step3Title">Desenvolvemos</h3>
+                    <p data-i18n="step3Description">
+                        Criamos e apresentamos seu projeto.
+                    </p>
                 </article>
             </div>
         </section>
+
+        <section class="about section" id="sobre">
+            <div class="about-content">
+                <p class="section-label" data-i18n="aboutLabel">SOBRE NÓS</p>
+
+                <h2 data-i18n="aboutTitle">
+                    Tecnologia que aproxima seu negócio de novas oportunidades.
+                </h2>
+
+                <p data-i18n="aboutDescription">
+                    A Digital Studio nasceu com a proposta de tornar soluções
+                    digitais mais acessíveis para pequenos negócios.
+                    Nosso objetivo é criar ferramentas práticas, funcionais
+                    e com uma apresentação profissional.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact section" id="contato">
+            <p class="section-label" data-i18n="contactLabel">
+                VAMOS CONVERSAR?
+            </p>
+
+            <h2 data-i18n="contactTitle">
+                Seu próximo projeto começa com uma conversa.
+            </h2>
+
+            <p data-i18n="contactDescription">
+                Entre em contato para apresentar sua ideia e solicitar um orçamento.
+            </p>
+
+            <a
+                href="https://wa.me/5511980568714?text=Olá,%20quero%20conhecer%20os%20serviços%20da%20Digital%20Studio."
+                class="button button-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="whatsappButton">
+                Conversar pelo WhatsApp
+            </a>
+        </section>
+
     </main>
 
-    <footer>
-        <p>© 2026 Digital Studio. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <a href="#" class="logo">Digital<span>Studio.</span></a>
+        <p data-i18n="footerText">
+            © 2026 Digital Studio. Todos os direitos reservados.
+        </p>
     </footer>
 
     <script src="script.js"></script>
